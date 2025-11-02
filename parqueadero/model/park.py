@@ -18,7 +18,7 @@ try:
 except ImportError:
     plt = None
 
-# Clase Vehiculo
+# Clase Vehculo
 class Vehiculo:
     def __init__(self, placa, tipo, hora_entrada=None, cliente="normal", visitas=0, lat=None, lon=None):
         self.placa = placa.upper()
