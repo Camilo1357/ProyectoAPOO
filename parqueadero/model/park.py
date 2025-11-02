@@ -252,8 +252,15 @@ class Funciones:
 
 
 # Utilidad
-
 def generar_ubicacion_aleatoria_en_campus():
-    lat = random.uniform(6.2500, 6.2750)
-    lon = random.uniform(-75.5800, -75.5600)
+    zonas = [
+        {"lat_min": 6.2318, "lat_max": 6.2323, "lon_min": -75.6108, "lon_max": -75.6098},
+
+        {"lat_min": 6.2302, "lat_max": 6.2310, "lon_min": -75.6118, "lon_max": -75.6108},
+
+        {"lat_min": 6.2310, "lat_max": 6.2318, "lon_min": -75.6120, "lon_max": -75.6110}
+    ]
+    zona = random.choice(zonas)
+    lat = random.uniform(zona["lat_min"], zona["lat_max"])
+    lon = random.uniform(zona["lon_min"], zona["lon_max"])
     return lat, lon
